@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Zbieracz danych</string>
+    <string name="button_add">Dodaj Osobe</string>
+    <string name="button_back">Wroc</string>
+    <string name="button_english">Angielski</string>
+    <string name="button_exit">Wyjdz</string>
+    <string name="button_finish">Zakoncz</string>
+    <string name="button_language">Jezyk</string>
+    <string name="button_next">Dalej</string>
+    <string name="button_pick_date">Pobierz date</string>
+    <string name="button_polish">Polski</string>
+    <string name="button_reset">Resetuj</string>
+    <string name="view_birth">Urodzony/a</string>
+    <string name="view_name">Imie</string>
+    <string name="view_surname">Nazwisko</string>
+    <string name="button_take_photo">Zrob Zdjecie</string>
+</resources>

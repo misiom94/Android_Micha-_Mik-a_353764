@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Data collector</string>
+    <string name="button_exit">Exit</string>
+    <string name="button_back">Back</string>
+    <string name="button_next">Next</string>
+    <string name="view_name">Name</string>
+    <string name="view_surname">Surname</string>
+    <string name="view_birth">Birth</string>
+    <string name="button_pick_date">Pick date</string>
+    <string name="button_language">Language</string>
+    <string name="button_add">Add Person</string>
+    <string name="button_polish">Polish</string>
+    <string name="button_english">English</string>
+    <string name="button_reset">Reset</string>
+    <string name="button_finish">Finish</string>
+    <string name="button_take_photo">Take Photo</string>
+</resources>
