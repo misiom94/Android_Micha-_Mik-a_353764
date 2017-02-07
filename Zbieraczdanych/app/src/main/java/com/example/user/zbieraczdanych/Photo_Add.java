@@ -27,8 +27,8 @@ public class Photo_Add extends AppCompatActivity {
     private final static String EXTRA_NAME = "extra_name";
     private final static String EXTRA_SURNAME = "extra_surname";
     private final static String EXTRA_BIRTHDAY_DATE = "extra_birthday_date";
-    private final static String EXTRA_PHOTO_PATH = "extra_photo_path";
-    private final static String SAVE_PHOTO_PATH = "save_photo_path";
+    private final static String EXTRA_PHOTO_PATH = "extra_photo_absolute_path";
+    private final static String SAVE_PHOTO_PATH = "save_photo_absolute_path";
     private String photoAbsolutePath = "";
     private String oldPhotoPath = "";
     private final static String INFO_WHAT_TO_DO = "info_what_to_do";

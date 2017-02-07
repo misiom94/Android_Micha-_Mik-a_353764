@@ -33,7 +33,7 @@ public class Database extends SQLiteOpenHelper{
                 +C_NAME+" TEXT,"
                 +C_SURNAME+" TEXT,"
                 +C_AGE+" TEXT,"
-                +C_PATH+"TEXT);";
+                +C_PATH+" TEXT);";
         sqLiteDatabase.execSQL(NEW_TABLE);
 
     }
@@ -59,6 +59,7 @@ public class Database extends SQLiteOpenHelper{
         sqLiteDatabase.update(TABLE_NAME,values,"ID=?",args);
 
     }
+
     public void deletePerson(Integer id)
     {
         SQLiteDatabase sqLiteDatabase =getWritableDatabase();

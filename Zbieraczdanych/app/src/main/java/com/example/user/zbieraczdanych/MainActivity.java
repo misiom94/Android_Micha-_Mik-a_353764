@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     "\n" + getString(R.string.view_surname) + " " + person.getSurname() +
                     "\n" + getString(R.string.view_birth) + " " + person.getBirthday());
             Log.i("PhotoPath", person.getPhotoPath());
-            textViewDetails.setMinimumWidth(400);
+            textViewDetails.setMinimumWidth(300);
             firstLinearLayout.addView(textViewDetails);
 
             ImageView imageViewPerson = new ImageView(this);
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void setButtonDelete(LinearLayout linearLayout, final Person person){
         final Button buttonDeletePerson = new Button(this);
-        buttonDeletePerson.setText("Delete");
+        buttonDeletePerson.setText(R.string.button_delete);
         buttonDeletePerson.setWidth(300);
         linearLayout.addView(buttonDeletePerson);
         buttonDeletePerson.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setButtonEdit(LinearLayout linearLayout, final Person person){
         final Button buttonEditPerson = new Button(this);
-        buttonEditPerson.setText("Edit");
+        buttonEditPerson.setText(R.string.button_edit);
         buttonEditPerson.setWidth(300);
         linearLayout.addView(buttonEditPerson);;
         buttonEditPerson.setOnClickListener(new View.OnClickListener() {
@@ -172,5 +172,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         clear();
+        toPeopleList();
+        displayPeopleList();
     }
 }
