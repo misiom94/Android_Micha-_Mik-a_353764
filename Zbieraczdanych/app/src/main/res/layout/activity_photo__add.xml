@@ -27,7 +27,8 @@
         android:layout_marginBottom="11dp"
         android:id="@+id/buttonPhoto"
         android:layout_above="@+id/buttonBack"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="takePhoto" />
 
     <Button
         android:text="@string/button_next"
