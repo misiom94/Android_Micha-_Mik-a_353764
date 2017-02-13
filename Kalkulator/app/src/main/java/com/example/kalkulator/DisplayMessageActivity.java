@@ -35,7 +35,6 @@ public class DisplayMessageActivity extends AppCompatActivity {
         Log.i("Button: ","Delete history");
         textView.setText("");
         history ="YES";
-
     }
 
     @Override

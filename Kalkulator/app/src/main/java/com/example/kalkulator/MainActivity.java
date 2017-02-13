@@ -39,10 +39,8 @@ public class MainActivity extends AppCompatActivity {
         equalsButton = (Button)findViewById(R.id.bWynik);
         zeroButton = (Button)findViewById(R.id.bZero);
         numberFlag=false;
-
         turnOffOnStartActivity();
-        addToList(operatorsList);
-
+        addOperators(operatorsList);
 
     }
 
@@ -61,21 +59,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void turnOffOnStartActivity() {
         equation.delete(0, equation.length());
-        disableButton(dotButton,false);
-        disableButton(equalsButton,false);
+        enableButton(dotButton,false);
+        enableButton(equalsButton,false);
         turnOffOperators(false);
-        disableButton(minusButton,true);
+        enableButton(minusButton,true);
         numberFlag=false;
 
     }
     public void turnOffOperators(boolean arg) {
-        disableButton(addButton,arg);
-        disableButton(minusButton,arg);
-        disableButton(divisionButton,arg);
-        disableButton(multiButton,arg);
-        disableButton(dotButton,arg);
+        enableButton(addButton,arg);
+        enableButton(minusButton,arg);
+        enableButton(divisionButton,arg);
+        enableButton(multiButton,arg);
     }
-    public void addToList(List<String> operatorsList){
+    public void addOperators(List<String> operatorsList){
         operatorsList.add("+");
         operatorsList.add("-");
         operatorsList.add("*");
@@ -87,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button)view;
         equation.append(button.getText());
         refresh();
-        disableButton(dotButton,true);
+        enableButton(dotButton,true);
         turnOffOperators(true);
-        disableButton(zeroButton,false);
-        disableButton(equalsButton,true);
+        enableButton(zeroButton,true);
+        enableButton(equalsButton,true);
         Log.i("Clicked: ",button.getText().toString());
     }
 
@@ -101,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             turnOffOperators(false);
-            disableButton(equalsButton,true);
+            enableButton(equalsButton,true);
         }
         Button b = (Button) view;
         equation.append(b.getText()) ;
@@ -114,10 +111,10 @@ public class MainActivity extends AppCompatActivity {
         Button b = (Button)v;
         if(addButton.isEnabled()){
             turnOffOperators(false);
-            disableButton(minusButton,true);
-            disableButton(dotButton,false);
+            enableButton(minusButton,true);
+            enableButton(dotButton,false);
             numberFlag=true;
-            disableButton(zeroButton,true);
+            enableButton(zeroButton,true);
         }
         else if(minusButton.isEnabled()){
             turnOffOperators(false);
@@ -212,11 +209,11 @@ public class MainActivity extends AppCompatActivity {
     {
         if(button.getText().equals('0')){
             if(equation.length()==1){
-                disableButton(zeroButton,false);
+                enableButton(zeroButton,false);
             }
             else if(operatorsList.contains(equation.charAt(equation.length()-2)+""))
             {
-                disableButton(zeroButton,false);
+                enableButton(zeroButton,false);
             }
         }
     }
@@ -226,11 +223,11 @@ public class MainActivity extends AppCompatActivity {
         int deleteEquationLength = equation.length()-1;
         while(deleteEquationLength>=0 && !operatorsList.contains(currentCharacter)){
             if(currentCharacter.equals(".")){
-                disableButton(dotButton,false);
+                enableButton(dotButton,false);
                 break;
             }
             else{
-                disableButton(dotButton,true);
+                enableButton(dotButton,true);
             }
             currentCharacter = equation.charAt(deleteEquationLength)+"";
             deleteEquationLength--;
@@ -239,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void disableButton(Button button, boolean flag)
+    public void enableButton(Button button, boolean flag)
     {
         button.setEnabled(flag);
     }
@@ -254,6 +251,7 @@ public class MainActivity extends AppCompatActivity {
         clear();
         refresh();
         turnOffOnStartActivity();
+        enableButton(zeroButton,true);
     }
 
     @Override
@@ -266,6 +264,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             super.onActivityResult(requestCode, resultCode, data);
-
     }
 }
