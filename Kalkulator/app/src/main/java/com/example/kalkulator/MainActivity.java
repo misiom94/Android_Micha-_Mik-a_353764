@@ -83,6 +83,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void dotClick(View view){
+        Button button = (Button)view;
+        equation.append(button.getText());
+        refresh();
+        disableButton(dotButton,true);
+        turnOffOperators(true);
+        disableButton(zeroButton,false);
+        disableButton(equalsButton,true);
+        Log.i("Clicked: ",button.getText().toString());
+    }
+
 
     public void clickNumber(View view) {
         if(!numberFlag) {
@@ -102,14 +113,14 @@ public class MainActivity extends AppCompatActivity {
     public void clickOperator(View v){
         Button b = (Button)v;
         if(addButton.isEnabled()){
-            turnOffOperators(true);
+            turnOffOperators(false);
             disableButton(minusButton,true);
-            disableButton(dotButton,true);
+            disableButton(dotButton,false);
             numberFlag=true;
             disableButton(zeroButton,true);
         }
         else if(minusButton.isEnabled()){
-            turnOffOperators(true);
+            turnOffOperators(false);
         }
         equation.append(b.getText());
         refresh();

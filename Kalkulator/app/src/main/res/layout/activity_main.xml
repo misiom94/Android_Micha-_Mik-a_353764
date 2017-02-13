@@ -101,7 +101,7 @@
         android:layout_alignBottom="@+id/bZero"
         android:layout_toRightOf="@+id/button7"
         android:layout_toEndOf="@+id/button7"
-        android:onClick="kliknijKropke"
+        android:onClick="dotClick"
         android:layout_width="70dp"
         android:layout_height="wrap_content" />
 
