@@ -69,15 +69,6 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true" />
 
-            <Button
-                android:text="@string/button_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/buttonNext"
-                android:onClick="toPhoto"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
-
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,6 +90,15 @@
                 android:layout_alignBottom="@+id/textViewName"
                 android:layout_toEndOf="@+id/textViewName"
                 android:hint="@string/view_name" />
+
+            <Button
+                android:text="@string/button_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonNext"
+                android:onClick="toPhoto"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
         </RelativeLayout>
     </ScrollView>
 

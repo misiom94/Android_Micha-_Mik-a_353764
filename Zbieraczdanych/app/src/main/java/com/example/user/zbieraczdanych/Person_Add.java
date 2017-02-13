@@ -190,10 +190,14 @@ public class Person_Add extends AppCompatActivity implements DatePickerDialog.On
     public void pickBirthdayDate(View view){
         if(textBirthday.getText().toString().equals(getString(R.string.view_birth))){
             DatePickerDialog datePickerDialogTakeBirthday = new DatePickerDialog(this,this, currentlyYear, currentlyMonth, currentlyDay);
+            datePickerDialogTakeBirthday.setButton(DatePickerDialog.BUTTON_POSITIVE,(getString(R.string.date_add)),datePickerDialogTakeBirthday);
+            datePickerDialogTakeBirthday.setButton(DatePickerDialog.BUTTON_NEGATIVE,(getString(R.string.button_back)),datePickerDialogTakeBirthday);
             datePickerDialogTakeBirthday.show();
         }
         else{
             DatePickerDialog datePickerDialogTakeBirthday = new DatePickerDialog(this,this, pickedYear, pickedMonth-1, pickedDay);
+            datePickerDialogTakeBirthday.setButton(DatePickerDialog.BUTTON_POSITIVE,(getString(R.string.date_add)),datePickerDialogTakeBirthday);
+            datePickerDialogTakeBirthday.setButton(DatePickerDialog.BUTTON_NEGATIVE,(getString(R.string.button_back)),datePickerDialogTakeBirthday);
             datePickerDialogTakeBirthday.show();
         }
     }

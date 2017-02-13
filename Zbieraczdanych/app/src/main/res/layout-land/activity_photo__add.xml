@@ -55,5 +55,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/buttonPhoto"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="takePhoto" />
 </RelativeLayout>

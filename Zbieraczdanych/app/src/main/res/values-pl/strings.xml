@@ -16,4 +16,5 @@
     <string name="button_take_photo">Zrob Zdjecie</string>
     <string name="button_delete">Usun</string>
     <string name="button_edit">Edycja</string>
+    <string name="date_add">Dodaj</string>
 </resources>
